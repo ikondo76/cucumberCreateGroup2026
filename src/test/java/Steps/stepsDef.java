@@ -41,8 +41,7 @@ public class stepsDef extends Base {
 
     @And("I click on the admin panel")
     public void iClickOnTheAdminPanel() {
-
-
+        dashboardPage.clickAdminMenuButton_xpath();
     }
 
     @And("I click on the groups tab")
