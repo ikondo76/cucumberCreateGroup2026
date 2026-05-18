@@ -3,6 +3,7 @@ package Steps;
 import Pages.DashboardPage;
 import Pages.HomePage;
 import Pages.LoginPage;
+import Pages.manageGroupsPage;
 import Utils.BrowserFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -15,5 +16,6 @@ public class Base {
     HomePage homePage = PageFactory.initElements(driver, HomePage.class);
     LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
     DashboardPage dashboardPage = PageFactory.initElements(driver, DashboardPage.class);
+    manageGroupsPage manageGroupsPage = PageFactory.initElements(driver, manageGroupsPage.class);
 
 }

@@ -1,6 +1,7 @@
 package Steps;
 
 import Pages.HomePage;
+import Pages.manageGroupsPage;
 import io.cucumber.java.PendingException;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -46,7 +47,8 @@ public class stepsDef extends Base {
 
     @And("I click on the groups tab")
     public void iClickOnTheGroupsTab() {
-           }
+        manageGroupsPage.
+    }
 
     @And("I click on the create new group button")
     public void iClickOnTheCreateNewGroupButton() {
