@@ -33,4 +33,8 @@ public class DashboardPage {
     public void clickUserMenuButton_xpath() {
         userMenuButton_xpath.click();
     }
+    public void clickAdminMenuButton_xpath() {
+        adminMenuButton_xpath.click();
+    }
 }
+
