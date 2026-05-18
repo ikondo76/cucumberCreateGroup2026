@@ -29,8 +29,7 @@ public class stepsDef extends Base {
 
     @Then("i should be logged in successfully")
     public void i_should_be_logged_in_successfully() {
-
-
+        dashboardPage.verifyDashboardPageIsDisplayed();
     }
 
 }
