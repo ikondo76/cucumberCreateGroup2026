@@ -13,6 +13,13 @@ public class ManageGroupsPage {
     @FindBy(xpath ="//*[@id=\"app-root\"]/div/div[3]/div/div[2]/button")
     WebElement createNewGroupButton_xpath;
 
+    @FindBy(xpath = "//*[@id=\"app-root\"]/div/div[3]/div/div[2]")
+    WebElement successToastMessage_xpath;
+
+
+    @FindBy(xpath = "//*[@id=\"app-root\"]/div/div[2]/div[2]/button")
+    WebElement backToWebsiteButton_xpath;
+
 
 
     public ManageGroupsPage(WebDriver driver) {
@@ -25,5 +32,13 @@ public class ManageGroupsPage {
 
     public void clickOnCreateNewGroupButton_xpath() {
         createNewGroupButton_xpath.click();
+    }
+
+    public void verifySuccessToastMessageIsDisplayed(String expectedMessage) {
+        successToastMessage_xpath.isDisplayed();
+    }
+
+    public void clickOnBackToWebsiteButton_xpath() {
+        backToWebsiteButton_xpath.click();
     }
 }

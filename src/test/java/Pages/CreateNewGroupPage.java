@@ -11,22 +11,22 @@ public class CreateNewGroupPage {
     WebElement createNewGroupHeading_xpath;
 
     @FindBy(xpath ="//*[@id=\"app-root\"]/div/div[3]/div/div[4]/div/form/div[1]/input")
-    WebElement enterGroupName_xpath;
+    WebElement groupName_xpath;
 
     @FindBy(xpath ="//*[@id=\"app-root\"]/div/div[3]/div/div[4]/div/form/div[2]/textarea")
-    WebElement enterGroupDescription_xpath;
+    WebElement groupDescription_xpath;
 
     @FindBy(xpath ="//*[@id=\"app-root\"]/div/div[3]/div/div[4]/div/form/div[3]/div[1]/input")
-    WebElement enterYear_xpath;
+    WebElement theYear_xpath;
 
     @FindBy(xpath ="//*[@id=\"app-root\"]/div/div[3]/div/div[4]/div/form/div[3]/div[2]/input")
-    WebElement enterMaxCapacity_xpath;
+    WebElement maxCapacity_xpath;
 
     @FindBy(xpath ="//*[@id=\"app-root\"]/div/div[3]/div/div[4]/div/form/div[4]/div[1]/input")
-    WebElement enterStartDate_xpath;
+    WebElement startDate_xpath;
 
     @FindBy(xpath ="//*[@id=\"app-root\"]/div/div[3]/div/div[4]/div/form/div[4]/div[2]/input")
-    WebElement enterEndDate_xpath;
+    WebElement endDate_xpath;
 
     @FindBy(xpath ="//*[@id=\"app-root\"]/div/div[3]/div/div[4]/div/form/div[5]/button[1]")
     WebElement createGroup_xpath;
@@ -40,30 +40,30 @@ public class CreateNewGroupPage {
         createNewGroupHeading_xpath.isDisplayed();
     }
     public void enterGroupName(String groupName) {
-        enterGroupName_xpath.sendKeys(groupName);
+        groupName_xpath.sendKeys(groupName);
     }
 
-    public void enterGroupDescription(String groupDescription) {
-        enterGroupDescription_xpath.sendKeys(groupDescription);
+    public void enterGroupDescription(String description) {
+        groupDescription_xpath.sendKeys(description);
     }
 
     public void enterYear(String year) {
-        enterYear_xpath.sendKeys(year);
+        theYear_xpath.sendKeys(year);
     }
 
-    public void enterMaxCapacity(String maxCapacity) {
-        enterMaxCapacity_xpath.sendKeys(maxCapacity);
+    public void enterMaxCapacity(String capacity) {
+        maxCapacity_xpath.sendKeys(capacity);
     }
 
-    public void enterStartDate(String startDate) {
-        enterStartDate_xpath.sendKeys(startDate);
+    public void enterStartDate(String date) {
+        startDate_xpath.sendKeys(date);
     }
 
-    public void enterEndDate(String endDate) {
-        enterEndDate_xpath.sendKeys(endDate);
+    public void enterEndDate(String date) {
+        endDate_xpath.sendKeys(date);
     }
 
-    public void clickOnCreateNewGroupButton() {
-        createNewGroupHeading_xpath.click();
+    public void clickOnCreateGroupButton() {
+        createGroup_xpath.click();
     }
 }

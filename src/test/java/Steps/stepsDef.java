@@ -1,9 +1,12 @@
 package Steps;
 
+import io.cucumber.java.PendingException;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+
+import java.time.Year;
 
 public class stepsDef extends Base {
     @Given("i am on the login page")
@@ -53,34 +56,47 @@ public class stepsDef extends Base {
     }
 
 
-    @And("I enter group name <groupName>")
-    public void iEnterGroupNameGroupName() {
+    @And("I enter group name (.*)$")
+    public void iEnterGroupName(String groupName) {
+        createNewGroupPage.enterGroupName(groupName);
+    }
+
+    @And("I enter group description (.*)$")
+    public void iEnterGroupDescriptionGroupDescription(String  groupDescription ) {
+        createNewGroupPage.enterGroupDescription(groupDescription);
+    }
+
+    @And("I enter year (.*)$")
+    public void iEnterYear(String theYear) {
+        createNewGroupPage.enterYear(theYear);
+    }
+
+    @And("I enter max capacity (.*)$")
+    public void iEnterMaxCapacityMaxCapacity(String maxCapacity) {
+        createNewGroupPage.enterMaxCapacity(maxCapacity);
 
     }
 
-    @And("I enter group description <groupDescription>")
-    public void iEnterGroupDescriptionGroupDescription() {
-
+    @And("I enter start date (.*)$")
+    public void iEnterStartDateStartDate(String startDate) {
+        createNewGroupPage.enterStartDate(startDate);
     }
 
-    @And("I enter year <year>")
-    public void iEnterYearYear() {
+    @And("I enter end date <endDate>")
+    public void iEnterEndDateEndDate(String endDate) {
+        createNewGroupPage.enterEndDate(endDate);
 
     }
-
-    @And("I enter max capacity <maxCapacity>")
-    public void iEnterMaxCapacityMaxCapacity() {
-
-    }
-
-    @And("I enter start date <startDate>")
-    public void iEnterStartDateStartDate() {
-
-    }
-
 
     @When("I click on the create group button")
     public void iClickOnTheCreateGroupButton() {
-
+       createNewGroupPage.clickOnCreateGroupButton();
     }
+
+    @Then("I should see the success message {string}")
+    public void iShouldSeeTheSuccessMessage(String arg0) {
+        manageGroupsPage.verifySuccessToastMessageIsDisplayed(arg0);
+    }
+
+
 }
