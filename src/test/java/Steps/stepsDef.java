@@ -44,14 +44,13 @@ public class stepsDef extends Base {
 
     @And("I click on the groups tab")
     public void iClickOnTheGroupsTab() {
-        manageGroupsPage.
+     manageGroupsPage.clickOnAdminPanelGroups_xpath();
     }
 
     @And("I click on the create new group button")
     public void iClickOnTheCreateNewGroupButton() {
-
+        manageGroupsPage.clickOnCreateNewGroupButton_xpath();
     }
-
 
 
     @And("I enter group name <groupName>")
