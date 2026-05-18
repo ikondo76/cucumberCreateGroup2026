@@ -18,6 +18,9 @@ public class DashboardPage {
     @FindBy(xpath = "//*[@id=\"app-root\"]/nav/div[1]/div[3]/div/button")
     WebElement userMenuButton_xpath;
 
+    @FindBy(xpath = "//*[@id=\"app-root\"]/nav/div[1]/div[3]/div/div/button[4]/span[2]")
+    WebElement adminMenuButton_xpath;
+
     public DashboardPage(WebDriver driver) {
         this.driver = driver;
     }
