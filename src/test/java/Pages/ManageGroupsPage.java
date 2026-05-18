@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class manageGroupsPage {
+public class ManageGroupsPage {
     WebDriver driver;
 
     @FindBy(xpath ="//*[@id=\"app-root\"]/div/div[2]/nav/button[4]")
@@ -15,7 +15,7 @@ public class manageGroupsPage {
 
 
 
-    public manageGroupsPage(WebDriver driver) {
+    public ManageGroupsPage(WebDriver driver) {
         this.driver = driver;
     }
 
