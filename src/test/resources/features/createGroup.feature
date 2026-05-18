@@ -9,7 +9,7 @@ Feature: Create Group
     And I click on the logged in user
     And I click on the admin panel
     And I click on the groups tab
-    And I click on the create group button
+    And I click on the create new group button
     And I enter group name <groupName>
     And I enter group description <groupDescription>
     And I enter year <year>

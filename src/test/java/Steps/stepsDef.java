@@ -1,6 +1,8 @@
 package Steps;
 
 import Pages.HomePage;
+import io.cucumber.java.PendingException;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -32,4 +34,56 @@ public class stepsDef extends Base {
         dashboardPage.verifyDashboardPageIsDisplayed();
     }
 
+    @And("I click on the logged in user")
+    public void iClickOnTheLoggedInUser() {
+        dashboardPage.clickUserMenuButton_xpath();
+    }
+
+    @And("I click on the admin panel")
+    public void iClickOnTheAdminPanel() {
+
+
+    }
+
+    @And("I click on the groups tab")
+    public void iClickOnTheGroupsTab() {
+           }
+
+    @And("I click on the create new group button")
+    public void iClickOnTheCreateNewGroupButton() {
+
+    }
+
+
+
+    @And("I enter group name <groupName>")
+    public void iEnterGroupNameGroupName() {
+
+    }
+
+    @And("I enter group description <groupDescription>")
+    public void iEnterGroupDescriptionGroupDescription() {
+
+    }
+
+    @And("I enter year <year>")
+    public void iEnterYearYear() {
+
+    }
+
+    @And("I enter max capacity <maxCapacity>")
+    public void iEnterMaxCapacityMaxCapacity() {
+
+    }
+
+    @And("I enter start date <startDate>")
+    public void iEnterStartDateStartDate() {
+
+    }
+
+
+    @When("I click on the create group button")
+    public void iClickOnTheCreateGroupButton() {
+
+    }
 }
