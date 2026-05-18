@@ -35,17 +35,14 @@ public class LoginPage {
     }
 
     public void enterEmail(String email) {
-        new WebDriverWait(driver, Duration.ofSeconds(15)).until(visibilityOf(loginEmail_id));
         loginEmail_id.sendKeys(email);
     }
 
     public void enterPassword(String password) {
-        new WebDriverWait(driver, Duration.ofSeconds(15)).until(visibilityOf(loginPassword_id));
         loginPassword_id.sendKeys(password);
     }
 
     public void loginSubmitButton() {
-        new WebDriverWait(driver, Duration.ofSeconds(15)).until(visibilityOf(loginPassword_id));
         loginSubmitButton_id.click();
     }
 
