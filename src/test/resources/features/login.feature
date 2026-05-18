@@ -7,6 +7,6 @@ Feature: Login
     When i clicklogin button
     Then i should be logged in successfully
     Examples:
-      | email    | ignatius@gmai.com |
-      | password | R001118w!!        |
+      | email    | admin@gmai.com |
+      | password | @12345678      |
 
