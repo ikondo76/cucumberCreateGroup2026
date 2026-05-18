@@ -15,17 +15,17 @@ public class stepsDef extends Base {
         loginPage.verifyLoginPageIsDisplayed();
     }
 
-    @Given("i enter email email")
+    @And("I enter email (.*)$")
     public void i_enter_email(String email) {
         loginPage.enterEmail(email);
 
     }
-    @Given("i enter password")
+    @And("I enter password (.*)$")
     public void i_enter_password(String password) {
         loginPage.enterPassword(password);
 
     }
-    @When("i click login Submit button")
+    @When("I click login button")
     public void i_click_login_button() {
         loginPage.loginSubmitButton();
     }
@@ -82,7 +82,7 @@ public class stepsDef extends Base {
         createNewGroupPage.enterStartDate(startDate);
     }
 
-    @And("I enter end date <endDate>")
+    @And("I enter end date (.*)$")
     public void iEnterEndDateEndDate(String endDate) {
         createNewGroupPage.enterEndDate(endDate);
 
@@ -99,4 +99,32 @@ public class stepsDef extends Base {
     }
 
 
+    @And("I click on Back to Website button")
+    public void iClickOnBackToWebsiteButton() {
+        manageGroupsPage.clickOnBackToWebsiteButton_xpath();
+    }
+
+
+    @And("Dashboard page should be displayed")
+    public void dashboardPageShouldBeDisplayed() {
+        dashboardPage.verifyDashboardPageIsDisplayed();
+    }
+
+
+    @And("I click on the logged in user again")
+    public void iClickOnTheLoggedInUserAgain() {
+       dashboardPage.clickUserMenuButton_xpath();
+    }
+
+
+    @And("I click on logout button")
+    public void iClickOnLogoutButton() {
+        dashboardPage.clickLogoutButton_xpath();
+    }
+
+    @And("logout confirmation popup should be displayed")
+    public void logoutConfirmationPopupShouldBeDisplayed() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
+    }
 }
