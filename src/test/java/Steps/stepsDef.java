@@ -122,8 +122,55 @@ public class stepsDef extends Base {
         dashboardPage.clickLogoutButton_xpath();
     }
 
+
     @And("logout confirmation alert should be displayed")
-    public void acceptAlertLogoutConfirmation() {
+    public void logoutConfirmationAlertShouldBeDisplayed() {
+        dashboardPage.verifyLogoutAlertIsDisplayed();
+    }
+
+
+    @And("I click on Ok button to confirm logout")
+    public void iClickOnOkButtonToConfirmLogout() {
         dashboardPage.acceptAlert();
+    }
+
+
+    @And("Home page should be displayed again")
+    public void homePageShouldBeDisplayedAgain() {
+        homePage.verifyHomePageIsDisplayed();
+    }
+
+
+    @And("I click on the login button again")
+    public void iClickOnTheLoginButtonAgain() {
+        homePage.clickLoginButton();
+    }
+
+
+    @And("Login page should be displayed again")
+    public void loginPageShouldBeDisplayedAgain() {
+        loginPage.verifyLoginPageIsDisplayed();
+    }
+
+
+    @And("I click on Sign Up here link")
+    public void iClickOnSignUpHereLink() {
+        loginPage.clickSignUpHereLink();
+    }
+
+    @And("Create Your Account page should be displayed")
+    public void createYourAccountPageIsBeDisplayed() {
+        createYourAccountPage.verifyCreateYourAccountPageIsDisplayed();
+    }
+
+    @And("I click on Select Your group dropdown")
+    public void iClickOnSelectYourGroupDropdown() {
+        createYourAccountPage.clickGroupDropdown();
+    }
+
+
+    @Then("I should see that the group was created successfully (.*)$")
+    public void iShouldSeeThatTheGroupWasCreatedSuccessfully(String groupName) {
+        createYourAccountPage.isGroupPresent(groupName);
     }
 }

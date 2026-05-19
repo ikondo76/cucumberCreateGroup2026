@@ -24,13 +24,13 @@ Feature: Create Group
     And I click on logout button
     And logout confirmation alert should be displayed
     And I click on Ok button to confirm logout
-    And Home page should be displayed
+    And Home page should be displayed again
     And I click on the login button again
-    And Login page should be displayed
+    And Login page should be displayed again
     And I click on Sign Up here link
     And Create Your Account page should be displayed
     And I click on Select Your group dropdown
-    Then I should see that the group was created successfully
+    Then I should see that the group was created successfully <groupName> in the dropdown list
     Examples:
       | email             | password  | groupName | groupDescription | year | maxCapacity | startDate  | endDate    |
       | admin@gmail.com   | @12345678 | some name | some description | 2026 |  65456      |  05182026  |  05182027  |

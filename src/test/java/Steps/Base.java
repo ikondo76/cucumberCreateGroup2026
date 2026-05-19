@@ -15,5 +15,7 @@ public class Base {
     DashboardPage dashboardPage = PageFactory.initElements(driver, DashboardPage.class);
     ManageGroupsPage manageGroupsPage = PageFactory.initElements(driver, ManageGroupsPage.class);
     CreateNewGroupPage createNewGroupPage = PageFactory.initElements(driver, CreateNewGroupPage.class);
+    CreateYourAccountPage createYourAccountPage = PageFactory.initElements(driver, CreateYourAccountPage.class);
+
 
 }

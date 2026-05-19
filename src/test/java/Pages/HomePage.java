@@ -19,6 +19,16 @@ public class HomePage {
         this.driver = driver;
     }
 
+    public void verifyHomePageIsDisplayed() {
+        String expectedURl = "https://ndosisimplifiedautomation.vercel.app/#overview";
+        String actualURL = driver.getCurrentUrl();
+        if (actualURL.equals(expectedURl)) {
+            System.out.println("Logout successful. Home page is displayed");
+        } else {
+            System.out.println("Home page NOT displayed. Actual URL: " + actualURL);
+        }
+    }
+
     public void clickLoginButton() {
         new WebDriverWait(driver, Duration.ofSeconds(15)).until(visibilityOf(loginButton_xpath));
         loginButton_xpath.click();

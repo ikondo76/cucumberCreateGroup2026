@@ -24,6 +24,9 @@ public class LoginPage {
     @FindBy(id = "login-submit")
     WebElement loginSubmitButton_id;
 
+    @FindBy(id = "signup-toggle")
+    WebElement signupToggleButton_id;
+
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
@@ -45,6 +48,11 @@ public class LoginPage {
     public void loginSubmitButton() {
         loginSubmitButton_id.click();
     }
+
+    public void clickSignUpHereLink() {
+        signupToggleButton_id.click();
+    }
+
 
 
 }

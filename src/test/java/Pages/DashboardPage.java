@@ -1,9 +1,12 @@
 package Pages;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.time.Duration;
 
@@ -46,6 +49,13 @@ public class DashboardPage {
 
     public void clickLogoutButton_xpath() {
         logoutButton_xpath.click();
+    }
+
+    public void verifyLogoutAlertIsDisplayed() {
+        new WebDriverWait(driver, Duration.ofSeconds(15)).until(ExpectedConditions.alertIsPresent());
+        Alert alert = driver.switchTo().alert();
+        String alertText = alert.getText();
+        Assert.assertEquals(alertText, "Are you sure you want to logout?");
     }
 
     public void acceptAlert() {
