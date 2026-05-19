@@ -37,6 +37,7 @@ public class LoginPage {
         loginHeading_xpath.isDisplayed();
     }
 
+
     public void enterEmail(String email) {
         loginEmail_id.sendKeys(email);
     }
@@ -52,7 +53,4 @@ public class LoginPage {
     public void clickSignUpHereLink() {
         signupToggleButton_id.click();
     }
-
-
-
 }
