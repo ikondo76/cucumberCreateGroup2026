@@ -123,7 +123,7 @@ public class stepsDef extends Base {
     }
 
     @And("logout confirmation alert should be displayed")
-    public void logoutConfirmationAlertShouldBeDisplayed() {
+    public void acceptAlertLogoutConfirmation() {
         dashboardPage.acceptAlert();
     }
 }
