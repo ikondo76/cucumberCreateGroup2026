@@ -32,5 +32,5 @@ Feature: Create Group
     And I click on Select Your group dropdown
     Then I should see that the group was created successfully <groupName> in the dropdown list
     Examples:
-      | email           | password  | groupName     | groupDescription | year | maxCapacity | startDate | endDate  |
-      | admin@gmail.com | @12345678 | My Very Group | My Very Group    | 2026 | 1500        | 20260519  | 20280519 |
+      | email           | password  | groupName     | groupDescription | year | maxCapacity | startDate  | endDate    |
+      | admin@gmail.com | @12345678 | My Very Group | My Very Group    | 2026 | 1500        | 2026/05/19 | 2028/05/19 |
