@@ -5,8 +5,12 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.time.Year;
+
+import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
 
 public class stepsDef extends Base {
     @Given("i am on the login page")
