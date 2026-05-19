@@ -65,24 +65,12 @@ public class CreateNewGroupPage {
         maxCapacity_xpath.sendKeys(capacity);
     }
 
-    public void enterStartDate(By locator, String startDate) throws InterruptedException {
+    public void enterStartDate(String  startDate) {
 //        startDate_xpath.click();
 //        startDate_xpath.sendKeys(Keys.CONTROL + "a");
 //        startDate_xpath.sendKeys(Keys.DELETE);
 //        startDate_xpath.sendKeys(date);
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement field = wait.until(ExpectedConditions.elementToBeClickable(locator));
-
-        field.click();
-        field.sendKeys(Keys.CONTROL + "a");
-        field.sendKeys(Keys.DELETE);
-
-        for (char c : startDate.toCharArray()) {
-            field.sendKeys(Character.toString(c));
-            Thread.sleep(80);
-        }
-
-    }
+          }
 
     public void enterEndDate(String date) {
         endDate_xpath.sendKeys(date);
