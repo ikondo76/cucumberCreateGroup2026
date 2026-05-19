@@ -63,21 +63,13 @@ public class CreateNewGroupPage {
     }
 
     public void enterStartDate(String  startDate) {
-//        startDate_xpath.click();
+          startDate_xpath.click();
+          startDate_xpath.clear();
 //        startDate_xpath.sendKeys(Keys.CONTROL + "a");
 //        startDate_xpath.sendKeys(Keys.DELETE);
-//        startDate_xpath.sendKeys(startDate);
+          startDate_xpath.sendKeys(startDate);
 
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].value='';", startDate_xpath);
 
-        js.executeScript("arguments[0].value=arguments[1];", startDate_xpath, startDate);
-
-        // Trigger events (VERY important)
-        js.executeScript(
-                "arguments[0].dispatchEvent(new Event('input', { bubbles: true }));" +
-                        "arguments[0].dispatchEvent(new Event('change', { bubbles: true }));",
-                startDate_xpath);
     }
 
 
