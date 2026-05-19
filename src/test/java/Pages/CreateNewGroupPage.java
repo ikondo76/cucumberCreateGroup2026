@@ -4,6 +4,11 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
+
+import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
 
 public class CreateNewGroupPage {
     WebDriver driver;
@@ -61,6 +66,7 @@ public class CreateNewGroupPage {
     public void enterStartDate(String date) {
         startDate_xpath.click();
         startDate_xpath.sendKeys(Keys.CONTROL + "a");
+        new WebDriverWait(driver, Duration.ofSeconds(15)).until(visibilityOf(startDate_xpath));
         startDate_xpath.sendKeys(Keys.DELETE);
         startDate_xpath.sendKeys(date);
     }
