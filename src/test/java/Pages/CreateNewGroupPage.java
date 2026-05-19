@@ -67,6 +67,12 @@ public class CreateNewGroupPage {
 //        startDate_xpath.click();
 //        startDate_xpath.sendKeys(Keys.CONTROL + "a");
 //        startDate_xpath.sendKeys(Keys.DELETE);
+        String raw = "startDate";
+        String formatted =
+                raw.substring(0,4) + "-" +
+                raw.substring(4,6) + "-" +
+                raw.substring(6,8);
+        System.out.println(formatted);
         startDate_xpath.sendKeys(date);
     }
 
