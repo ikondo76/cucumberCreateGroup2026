@@ -3,6 +3,11 @@ package Pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
+
+import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
 
 public class ManageGroupsPage {
     WebDriver driver;
@@ -31,6 +36,7 @@ public class ManageGroupsPage {
     }
 
     public void clickOnCreateNewGroupButton_xpath() {
+        new WebDriverWait(driver, Duration.ofSeconds(15)).until(visibilityOf(createNewGroupButton_xpath));
         createNewGroupButton_xpath.click();
     }
 
