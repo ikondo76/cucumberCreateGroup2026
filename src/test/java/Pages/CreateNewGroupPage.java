@@ -1,5 +1,6 @@
 package Pages;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -58,6 +59,9 @@ public class CreateNewGroupPage {
     }
 
     public void enterStartDate(String date) {
+        startDate_xpath.click();
+        startDate_xpath.sendKeys(Keys.CONTROL + "a");
+        startDate_xpath.sendKeys(Keys.DELETE);
         startDate_xpath.sendKeys(date);
     }
 
