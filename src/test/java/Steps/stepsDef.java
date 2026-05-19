@@ -16,17 +16,17 @@ public class stepsDef extends Base {
     }
 
     @And("I enter email (.*)$")
-    public void i_enter_email(String email) {
+    public void I_enter_email(String email) {
         loginPage.enterEmail(email);
 
     }
     @And("I enter password (.*)$")
-    public void i_enter_password(String password) {
+    public void I_enter_password(String password) {
         loginPage.enterPassword(password);
 
     }
     @When("I click login button")
-    public void i_click_login_button() {
+    public void I_click_login_button() {
         loginPage.loginSubmitButton();
     }
 
