@@ -6,6 +6,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.Date;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
 
@@ -62,12 +63,12 @@ public class CreateNewGroupPage {
         maxCapacity_xpath.sendKeys(capacity);
     }
 
-    public void enterStartDate(String  startDate) {
+    public void enterStartDate(String Date) {
           startDate_xpath.click();
           startDate_xpath.clear();
 //        startDate_xpath.sendKeys(Keys.CONTROL + "a");
 //        startDate_xpath.sendKeys(Keys.DELETE);
-          startDate_xpath.sendKeys(startDate);
+          startDate_xpath.sendKeys(Date);
     }
 
 
