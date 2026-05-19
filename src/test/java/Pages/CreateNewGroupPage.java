@@ -48,6 +48,8 @@ public class CreateNewGroupPage {
     }
 
     public void enterYear(String year) {
+        theYear_xpath.click();
+        theYear_xpath.clear();
         theYear_xpath.sendKeys(year);
     }
 
