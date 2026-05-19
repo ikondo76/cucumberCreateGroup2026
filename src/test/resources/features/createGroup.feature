@@ -22,7 +22,7 @@ Feature: Create Group
     And Dashboard page should be displayed
     And I click on the logged in user again
     And I click on logout button
-    And logout confirmation popup should be displayed
+    And logout confirmation alert should be displayed
     And I click on Ok button to confirm logout
     And Home page should be displayed
     And I click on the login button again

@@ -122,9 +122,8 @@ public class stepsDef extends Base {
         dashboardPage.clickLogoutButton_xpath();
     }
 
-    @And("logout confirmation popup should be displayed")
-    public void logoutConfirmationPopupShouldBeDisplayed() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+    @And("logout confirmation alert should be displayed")
+    public void logoutConfirmationAlertShouldBeDisplayed() {
+        dashboardPage.acceptAlert();
     }
 }

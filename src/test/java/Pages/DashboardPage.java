@@ -47,5 +47,9 @@ public class DashboardPage {
     public void clickLogoutButton_xpath() {
         logoutButton_xpath.click();
     }
+
+    public void acceptAlert() {
+        driver.switchTo().alert().accept();
+    }
 }
 
