@@ -64,11 +64,9 @@ public class CreateNewGroupPage {
     }
 
     public void enterStartDate(String date) {
-        startDate_xpath.click();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        startDate_xpath.sendKeys(Keys.CONTROL + "a");
-        startDate_xpath.sendKeys(Keys.DELETE);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//        startDate_xpath.click();
+//        startDate_xpath.sendKeys(Keys.CONTROL + "a");
+//        startDate_xpath.sendKeys(Keys.DELETE);
         startDate_xpath.sendKeys(date);
     }
 
