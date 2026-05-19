@@ -47,6 +47,7 @@ public class DashboardPage {
 
 
     public void clickAdminMenuButton_xpath() {
+        new WebDriverWait(driver, Duration.ofSeconds(15)).until(visibilityOf(adminMenuButton_xpath));
         adminMenuButton_xpath.click();
     }
 
