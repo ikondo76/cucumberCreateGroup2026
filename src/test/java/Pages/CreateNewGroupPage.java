@@ -65,10 +65,10 @@ public class CreateNewGroupPage {
 
     public void enterStartDate(String date) {
         startDate_xpath.click();
-        new WebDriverWait(driver, Duration.ofSeconds(15)).until(visibilityOf(startDate_xpath));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         startDate_xpath.sendKeys(Keys.CONTROL + "a");
-        new WebDriverWait(driver, Duration.ofSeconds(15)).until(visibilityOf(startDate_xpath));
         startDate_xpath.sendKeys(Keys.DELETE);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         startDate_xpath.sendKeys(date);
     }
 
