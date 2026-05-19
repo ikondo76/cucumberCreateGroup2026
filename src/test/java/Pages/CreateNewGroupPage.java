@@ -1,9 +1,11 @@
 package Pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -63,17 +65,23 @@ public class CreateNewGroupPage {
         maxCapacity_xpath.sendKeys(capacity);
     }
 
-    public void enterStartDate(String date) {
+    public void enterStartDate(By locator, String startDate) throws InterruptedException {
 //        startDate_xpath.click();
 //        startDate_xpath.sendKeys(Keys.CONTROL + "a");
 //        startDate_xpath.sendKeys(Keys.DELETE);
-        String raw = "startDate";
-        String formatted =
-                raw.substring(0,4) + "-" +
-                raw.substring(4,6) + "-" +
-                raw.substring(6,8);
-        System.out.println(formatted);
-        startDate_xpath.sendKeys(date);
+//        startDate_xpath.sendKeys(date);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement field = wait.until(ExpectedConditions.elementToBeClickable(locator));
+
+        field.click();
+        field.sendKeys(Keys.CONTROL + "a");
+        field.sendKeys(Keys.DELETE);
+
+        for (char c : startDate.toCharArray()) {
+            field.sendKeys(Character.toString(c));
+            Thread.sleep(80);
+        }
+
     }
 
     public void enterEndDate(String date) {
