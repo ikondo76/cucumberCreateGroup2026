@@ -68,12 +68,11 @@ public class CreateNewGroupPage {
 //        startDate_xpath.sendKeys(Keys.CONTROL + "a");
 //        startDate_xpath.sendKeys(Keys.DELETE);
           startDate_xpath.sendKeys(startDate);
-
-
     }
 
 
     public void enterEndDate(String date) {
+        endDate_xpath.clear();
         endDate_xpath.sendKeys(date);
     }
 
