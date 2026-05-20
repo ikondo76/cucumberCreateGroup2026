@@ -13,28 +13,28 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
 public class CreateNewGroupPage {
     WebDriver driver;
 
-    @FindBy(xpath ="//*[@id=\"app-root\"]/div/div[3]/div/div[4]/div/h3")
+    @FindBy(xpath = "//*[@id=\"app-root\"]/div/div[3]/div/div[4]/div/h3")
     WebElement createNewGroupHeading_xpath;
 
-    @FindBy(xpath ="//*[@id=\"app-root\"]/div/div[3]/div/div[4]/div/form/div[1]/input")
+    @FindBy(xpath = "//*[@id=\"app-root\"]/div/div[3]/div/div[4]/div/form/div[1]/input")
     WebElement groupName_xpath;
 
-    @FindBy(xpath ="//*[@id=\"app-root\"]/div/div[3]/div/div[4]/div/form/div[2]/textarea")
+    @FindBy(xpath = "//*[@id=\"app-root\"]/div/div[3]/div/div[4]/div/form/div[2]/textarea")
     WebElement groupDescription_xpath;
 
-    @FindBy(xpath ="//*[@id=\"app-root\"]/div/div[3]/div/div[4]/div/form/div[3]/div[1]/input")
+    @FindBy(xpath = "//*[@id=\"app-root\"]/div/div[3]/div/div[4]/div/form/div[3]/div[1]/input")
     WebElement theYear_xpath;
 
-    @FindBy(xpath ="//*[@id=\"app-root\"]/div/div[3]/div/div[4]/div/form/div[3]/div[2]/input")
+    @FindBy(xpath = "//*[@id=\"app-root\"]/div/div[3]/div/div[4]/div/form/div[3]/div[2]/input")
     WebElement maxCapacity_xpath;
 
-    @FindBy(xpath ="//*[@id=\"app-root\"]/div/div[3]/div/div[4]/div/form/div[4]/div[1]/input")
+    @FindBy(xpath = "//*[@id=\"app-root\"]/div/div[3]/div/div[4]/div/form/div[4]/div[1]/input")
     WebElement startDate_xpath;
 
-    @FindBy(xpath ="//*[@id=\"app-root\"]/div/div[3]/div/div[4]/div/form/div[4]/div[2]/input")
+    @FindBy(xpath = "//*[@id=\"app-root\"]/div/div[3]/div/div[4]/div/form/div[4]/div[2]/input")
     WebElement endDate_xpath;
 
-    @FindBy(xpath ="//*[@id=\"app-root\"]/div/div[3]/div/div[4]/div/form/div[5]/button[1]")
+    @FindBy(xpath = "//*[@id=\"app-root\"]/div/div[3]/div/div[4]/div/form/div[5]/button[1]")
     WebElement createGroup_xpath;
 
 
@@ -45,6 +45,7 @@ public class CreateNewGroupPage {
     public void verifyCreateNewGroupPageIsDisplayed() {
         createNewGroupHeading_xpath.isDisplayed();
     }
+
     public void enterGroupName(String groupName) {
         groupName_xpath.sendKeys(groupName);
     }
@@ -64,11 +65,11 @@ public class CreateNewGroupPage {
     }
 
     public void enterStartDate(String startDate) {
-          startDate_xpath.click();
-          startDate_xpath.clear();
-//        startDate_xpath.sendKeys(Keys.CONTROL + "a");
-//        startDate_xpath.sendKeys(Keys.DELETE);
-          startDate_xpath.sendKeys(startDate);
+        startDate_xpath.click();
+        //startDate_xpath.clear();
+        startDate_xpath.sendKeys(Keys.CONTROL + "a");
+        startDate_xpath.sendKeys(Keys.DELETE);
+        startDate_xpath.sendKeys(startDate);
     }
 
 
