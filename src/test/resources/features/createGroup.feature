@@ -31,7 +31,7 @@ Feature: Create Group
     And Create Your Account page should be displayed
     And I click on Select Your group dropdown
     And I should see that the group was created successfully <groupName> in the dropdown list
-    Then I should close the browser
+#    Then I should close the browser
     Examples:
       | email           | password  | groupName         | groupDescription  | year | maxCapacity | startDate    | endDate      |
       | admin@gmail.com | @12345678 | The Magic group 2 | The Magic Group 2 | 2026 | 1500        | 002026-05-20 | 002028-05-20 |
