@@ -185,10 +185,10 @@ public class stepsDef extends Base {
         createYourAccountPage.isGroupPresent(groupName);
     }
 
-    @Then("I should close the browser")
-    public void iShouldCloseTheBrowser() {
-        driver.quit();
-    }
+//    @Then("I should close the browser")
+//    public void iShouldCloseTheBrowser() {
+//        driver.quit();
+//    }
 
 
 }
