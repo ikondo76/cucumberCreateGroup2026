@@ -43,7 +43,7 @@ public class CreateYourAccountPage {
 //                .anyMatch(option -> option.getText().equals(groupName));
 //    }
 
-    public void verifyGroupValueExists(String groupName) {
+    public void verifyGroupValueExists(String createdGroupName) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         // Open dropdown
@@ -51,10 +51,10 @@ public class CreateYourAccountPage {
 
         // Verify option is visible
         WebElement option = wait.until(
-                ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id='register-group']" + groupName + "']"))
+                ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id='register-group']" + createdGroupName + "']"))
         );
 
-        Assert.assertTrue(option.isDisplayed(), "Group value NOT found: " + groupName);
+        Assert.assertTrue(option.isDisplayed(), "Group value NOT found: " + createdGroupName);
     }
 
 }
