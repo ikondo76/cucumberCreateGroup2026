@@ -82,7 +82,7 @@ public class stepsDef extends Base {
     }
 
     @And("I enter start date (.*)$")
-    public void iEnterStartDateStartDate(String startDate) {
+    public void iEnterStartDateStartDate(String startDate) throws InterruptedException {
         createNewGroupPage.enterStartDate(startDate);
     }
 

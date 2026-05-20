@@ -1,6 +1,7 @@
 package Pages;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -64,12 +65,36 @@ public class CreateNewGroupPage {
         maxCapacity_xpath.sendKeys(capacity);
     }
 
-    public void enterStartDate(String startDate) {
-        startDate_xpath.click();
-        //startDate_xpath.clear();
-        startDate_xpath.sendKeys(Keys.CONTROL + "a");
-        startDate_xpath.sendKeys(Keys.DELETE);
+    public void enterStartDate(String startDate) throws InterruptedException {
+//        startDate_xpath.click();
+//        startDate_xpath.clear();
+//        startDate_xpath.sendKeys(Keys.chord(Keys.CONTROL + "a"));
+//        startDate_xpath.sendKeys(Keys.BACK_SPACE);
+//        Thread.sleep(2000);
         startDate_xpath.sendKeys(startDate);
+//        Actions actions = new Actions(driver);
+//
+//        actions.keyDown(Keys.CONTROL)
+//                .sendKeys("a")
+//                .keyUp(Keys.CONTROL)
+//                .sendKeys(Keys.BACK_SPACE)
+//                .pause(Duration.ofMillis(300))
+//                .sendKeys(startDate)
+//                .perform();
+
+//        JavascriptExecutor js = (JavascriptExecutor) driver;
+//
+//// Set value directly
+//        js.executeScript(
+//                "arguments[0].value= '"+startDate+"';",
+//                startDate_xpath
+//        );
+//
+//// Trigger change event
+//        js.executeScript(
+//                "arguments[0].dispatchEvent(new Event('change'));",
+//                startDate_xpath
+//        );
     }
 
 
