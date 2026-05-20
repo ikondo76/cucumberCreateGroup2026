@@ -63,12 +63,12 @@ public class CreateNewGroupPage {
         maxCapacity_xpath.sendKeys(capacity);
     }
 
-    public void enterStartDate(String Date) {
+    public void enterStartDate(String startDate) {
           startDate_xpath.click();
           startDate_xpath.clear();
 //        startDate_xpath.sendKeys(Keys.CONTROL + "a");
 //        startDate_xpath.sendKeys(Keys.DELETE);
-          startDate_xpath.sendKeys(Date);
+          startDate_xpath.sendKeys(startDate);
     }
 
 
