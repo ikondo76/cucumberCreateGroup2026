@@ -33,5 +33,5 @@ Feature: Create Group
     And I should see that the group was created successfully <groupName> in the dropdown list
     Then I should close the browser
     Examples:
-      | email           | password  | groupName     | groupDescription | year | maxCapacity | startDate    | endDate      |
-      | admin@gmail.com | @12345678 | My Very Group | My Very Group    | 2026 | 1500        | 002026-05-20 | 002028-05-20 |
+      | email           | password  | groupName   | groupDescription | year | maxCapacity | startDate    | endDate      |
+      | admin@gmail.com | @12345678 | Magic group | Magic Group      | 2026 | 1500        | 002026-05-20 | 002028-05-20 |
