@@ -173,8 +173,13 @@ public class stepsDef extends Base {
     }
 
 
-    @Then("I should see that the group was created successfully (.*)$")
+    @And("I should see that the group was created successfully (.*)$")
     public void iShouldSeeThatTheGroupWasCreatedSuccessfully(String groupName) {
         createYourAccountPage.isGroupPresent(groupName);
+    }
+
+    @Then("I should close the browser")
+    public void iShouldCloseTheBrowser() {
+        driver.quit();
     }
 }
