@@ -99,7 +99,7 @@ public class CreateNewGroupPage {
 
 
     public void enterEndDate(String date) {
-        endDate_xpath.clear();
+//        endDate_xpath.clear();
         endDate_xpath.sendKeys(date);
     }
 
