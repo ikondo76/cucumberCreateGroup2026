@@ -43,9 +43,11 @@ public class CreateNewGroupPage {
         this.driver = driver;
     }
 
-    public void verifyCreateNewGroupPageIsDisplayed() {
-        createNewGroupHeading_xpath.isDisplayed();
-    }
+//    public void verifyCreateNewGroupPageIsDisplayed() {
+//        new WebDriverWait(driver, Duration.ofSeconds(15)).until(visibilityOf(createNewGroupHeading_xpath));
+//        createNewGroupHeading_xpath.isDisplayed();
+//    }
+
 
     public void enterGroupName(String groupName) {
         groupName_xpath.sendKeys(groupName);

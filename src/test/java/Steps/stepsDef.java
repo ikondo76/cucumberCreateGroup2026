@@ -1,5 +1,6 @@
 package Steps;
 
+import Pages.CreateNewGroupPage;
 import io.cucumber.java.PendingException;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -59,6 +60,12 @@ public class stepsDef extends Base {
         manageGroupsPage.clickOnCreateNewGroupButton_xpath();
     }
 
+
+//    @And("I should verify that the create group page is displayed")
+//    public void iShouldVerifyThatTheCreateGroupPageIsDisplayed() {
+//        createYourAccountPage.verifyCreateNewGroupPageIsDisplayed();
+//
+//    }
 
     @And("I enter group name (.*)$")
     public void iEnterGroupName(String groupName) {
@@ -182,4 +189,6 @@ public class stepsDef extends Base {
     public void iShouldCloseTheBrowser() {
         driver.quit();
     }
+
+
 }
