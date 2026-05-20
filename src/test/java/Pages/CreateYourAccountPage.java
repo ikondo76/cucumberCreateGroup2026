@@ -51,7 +51,7 @@ public class CreateYourAccountPage {
 
         // Verify option is visible
         WebElement option = wait.until(
-                ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[text()='" + groupName + "']"))
+                ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id='register-group']" + groupName + "']"))
         );
 
         Assert.assertTrue(option.isDisplayed(), "Group value NOT found: " + groupName);
