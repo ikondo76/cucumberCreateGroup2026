@@ -182,7 +182,7 @@ public class stepsDef extends Base {
 
     @And("I should see that the group was created successfully (.*)$")
     public void iShouldSeeThatTheGroupWasCreatedSuccessfully(String groupName) {
-        createYourAccountPage.isGroupPresent(groupName);
+        createYourAccountPage.verifyGroupValueExists(groupName);
     }
 
 //    @Then("I should close the browser")
