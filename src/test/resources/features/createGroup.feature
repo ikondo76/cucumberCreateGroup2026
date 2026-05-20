@@ -34,4 +34,4 @@ Feature: Create Group
 #    Then I should close the browser
     Examples:
       | email           | password  | groupName          | groupDescription   | year | maxCapacity | startDate    | endDate      |
-      | admin@gmail.com | @12345678 | The Magic group 22 | The Magic Group 22 | 2026 | 1500        | 002026-05-20 | 002028-05-20 |
+      | admin@gmail.com | @12345678 | The Magic group 23 | The Magic Group 23 | 2026 | 1500        | 002026-05-20 | 002028-05-20 |
