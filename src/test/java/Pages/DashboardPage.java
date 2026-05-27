@@ -15,17 +15,30 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
 public class DashboardPage {
     WebDriver driver;
 
-    @FindBy(xpath = "//*[@id=\"app-main-content\"]/section/div[1]/h2")
+    @FindBy(xpath = "//section//h2/span[1]")
     WebElement dashboardHeading_xpath;
 
-    @FindBy(xpath = "//*[@id=\"app-root\"]/nav/div[1]/div[3]/div/button")
+    @FindBy(xpath = "//nav//button//span[contains(text(), 'Menu')]")
     WebElement userMenuButton_xpath;
 
-    @FindBy(xpath = "//*[@id=\"app-root\"]/nav/div[1]/div[3]/div/div/button[4]/span[2]")
+    @FindBy(xpath = "//nav//button//span[contains(text(), 'Admin Panel')]")
     WebElement adminMenuButton_xpath;
 
-    @FindBy(xpath = "//*[@id=\"app-root\"]/nav/div[1]/div[3]/div/div/button[5]/span[2]")
+    @FindBy(xpath = "//span[contains(text(), 'Logout')]")
     WebElement logoutButton_xpath;
+
+    @FindBy(xpath ="//nav//button[contains(text(), 'Groups')]")
+    WebElement groupsMenu_xpath;
+
+    @FindBy(xpath ="//button[contains(text(), 'Create New Group')]")
+    WebElement createNewGroupButton_xpath;
+
+    @FindBy(xpath = "//div[contains(text(), 'Group created successfully')]")
+    WebElement successToastMessage_xpath;
+
+
+    @FindBy(xpath = "//*[contains(text(), 'Back to Website')]")
+    WebElement backToWebsiteButton_xpath;
 
 
 
@@ -52,7 +65,26 @@ public class DashboardPage {
     }
 
     public void clickLogoutButton_xpath() {
+        new WebDriverWait(driver, Duration.ofSeconds(15)).until(visibilityOf(logoutButton_xpath));
         logoutButton_xpath.click();
+    }
+
+    public void  clickOnAdminPanelGroups_xpath() {
+        groupsMenu_xpath.click();
+    }
+
+    public void clickOnCreateNewGroupButton_xpath() {
+        new WebDriverWait(driver, Duration.ofSeconds(15)).until(visibilityOf(createNewGroupButton_xpath));
+        createNewGroupButton_xpath.click();
+    }
+
+    public void verifySuccessToastMessageIsDisplayed(String expectedMessage) {
+        new WebDriverWait(driver, Duration.ofSeconds(15)).until(visibilityOf(successToastMessage_xpath));
+        successToastMessage_xpath.isDisplayed();
+    }
+
+    public void clickOnBackToWebsiteButton_xpath() {
+        backToWebsiteButton_xpath.click();
     }
 
     public void verifyLogoutAlertIsDisplayed() {
@@ -63,6 +95,7 @@ public class DashboardPage {
     }
 
     public void acceptAlert() {
+        new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.alertIsPresent());
         driver.switchTo().alert().accept();
     }
 }

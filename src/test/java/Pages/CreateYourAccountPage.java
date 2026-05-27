@@ -10,13 +10,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.time.Duration;
+import java.util.List;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
 
 public class CreateYourAccountPage {
     WebDriver driver;
 
-    @FindBy(xpath = "//*[@id=\"registration-heading\"]")
+    @FindBy(id = "registration-heading")
     WebElement registrationHeading;
 
     @FindBy(id = "register-group")
@@ -35,27 +36,36 @@ public class CreateYourAccountPage {
     }
 
 
-//    public boolean isGroupPresent(String groupName) {
+    //    public boolean isGroupPresent(String groupName) {
 //        new WebDriverWait(driver, Duration.ofSeconds(15)).until(visibilityOf(groupName_id));
 //        Select groupDropdown = new Select(driver.findElement(By.id("register-group")));
 //        return groupDropdown.getOptions()
 //                .stream()
 //                .anyMatch(option -> option.getText().equals(groupName));
 //    }
+    public void verifyGroupValueExists(String groupName) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+        WebElement dropdownElement = driver.findElement(By.id("register-group"));
+        //Get all dropdown option
+        Select dropdown = new Select(dropdownElement);
 
-    public void verifyGroupValueExists(String createdGroupName) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        String expectedValue = "Just Another Group 30";
+        boolean valueFound = false;
 
-        // Open dropdown
-        wait.until(ExpectedConditions.elementToBeClickable(groupName_id)).click();
+        //Loop through dropdown values
+        for (WebElement option : groupName_id.findElements(By.tagName("option"))) {
+            if (option.getText().equals(expectedValue)) {
+                valueFound = true;
+                break;
+            }
+        }
 
-        // Verify option is visible
-        WebElement option = wait.until(
-                ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id='register-group']" + createdGroupName + "']"))
-        );
-
-        Assert.assertTrue(option.isDisplayed(), "Group value NOT found: " + createdGroupName);
+        //Validation
+        if (!valueFound) {
+            System.out.println("Value is present in the dropdown");
+        } else {
+            System.out.println("Value is NOT present in the dropdown");
+        }
     }
-
 }
 

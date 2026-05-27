@@ -12,7 +12,7 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
 public class LoginPage {
     WebDriver driver;
 
-    @FindBy(xpath ="//*[@id=\"login-heading\"]/span")
+    @FindBy(xpath ="//span[contains(text(), 'Access Learning Materials')]")
     WebElement loginHeading_xpath;
 
     @FindBy(id = "login-email")

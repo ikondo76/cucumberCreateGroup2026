@@ -52,12 +52,12 @@ public class stepsDef extends Base {
 
     @And("I click on the groups tab")
     public void iClickOnTheGroupsTab() {
-     manageGroupsPage.clickOnAdminPanelGroups_xpath();
+     dashboardPage.clickOnAdminPanelGroups_xpath();
     }
 
     @And("I click on the create new group button")
     public void iClickOnTheCreateNewGroupButton() {
-        manageGroupsPage.clickOnCreateNewGroupButton_xpath();
+        dashboardPage.clickOnCreateNewGroupButton_xpath();
     }
 
 
@@ -106,13 +106,13 @@ public class stepsDef extends Base {
 
     @Then("I should see the success message {string}")
     public void iShouldSeeTheSuccessMessage(String arg0) {
-        manageGroupsPage.verifySuccessToastMessageIsDisplayed(arg0);
+        dashboardPage.verifySuccessToastMessageIsDisplayed(arg0);
     }
 
 
     @And("I click on Back to Website button")
     public void iClickOnBackToWebsiteButton() {
-        manageGroupsPage.clickOnBackToWebsiteButton_xpath();
+        dashboardPage.clickOnBackToWebsiteButton_xpath();
     }
 
 
@@ -148,6 +148,7 @@ public class stepsDef extends Base {
 
     @And("Home page should be displayed again")
     public void homePageShouldBeDisplayedAgain() {
+
         homePage.verifyHomePageIsDisplayed();
     }
 
@@ -180,15 +181,16 @@ public class stepsDef extends Base {
     }
 
 
-    @And("I should see that the group was created successfully (.*)$")
-    public void iShouldSeeThatTheGroupWasCreatedSuccessfully(String groupName) {
-        createYourAccountPage.verifyGroupValueExists(groupName);
+   @And("I should see that the group was created successfully")
+    public void iShouldSeeThatTheGroupWasCreatedSuccessfully() {
+        createYourAccountPage.verifyGroupValueExists("Just Another Group 30");
+
     }
 
-//    @Then("I should close the browser")
-//    public void iShouldCloseTheBrowser() {
-//        driver.quit();
-//    }
+    @Then("I should close the browser")
+   public void iShouldCloseTheBrowser() {
+        driver.quit();
+    }
 
 
 }

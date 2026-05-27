@@ -14,28 +14,28 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
 public class CreateNewGroupPage {
     WebDriver driver;
 
-    @FindBy(xpath = "//*[@id=\"app-root\"]/div/div[3]/div/div[4]/div/h3")
+    @FindBy(xpath = "//span[contains(text(), 'Create New Group')]]")
     WebElement createNewGroupHeading_xpath;
 
-    @FindBy(xpath = "//*[@id=\"app-root\"]/div/div[3]/div/div[4]/div/form/div[1]/input")
+    @FindBy(xpath = "//label[contains(text(), 'Group Name')]/following::input[1]")
     WebElement groupName_xpath;
 
-    @FindBy(xpath = "//*[@id=\"app-root\"]/div/div[3]/div/div[4]/div/form/div[2]/textarea")
+    @FindBy(xpath = "//label[contains(text(), 'Description')]/following::textarea[1]")
     WebElement groupDescription_xpath;
 
-    @FindBy(xpath = "//*[@id=\"app-root\"]/div/div[3]/div/div[4]/div/form/div[3]/div[1]/input")
+    @FindBy(xpath = "//label[contains(text(), 'Year')]/following::input[1]")
     WebElement theYear_xpath;
 
-    @FindBy(xpath = "//*[@id=\"app-root\"]/div/div[3]/div/div[4]/div/form/div[3]/div[2]/input")
+    @FindBy(xpath = "//label[contains(text(), 'Max Capacity')]/following::input[1]")
     WebElement maxCapacity_xpath;
 
-    @FindBy(xpath = "//*[@id=\"app-root\"]/div/div[3]/div/div[4]/div/form/div[4]/div[1]/input")
+    @FindBy(xpath = "//label[contains(text(), 'Start Date')]/following::input[1]")
     WebElement startDate_xpath;
 
-    @FindBy(xpath = "//*[@id=\"app-root\"]/div/div[3]/div/div[4]/div/form/div[4]/div[2]/input")
+    @FindBy(xpath = "//label[contains(text(), 'End Date')]/following::input[1]")
     WebElement endDate_xpath;
 
-    @FindBy(xpath = "//*[@id=\"app-root\"]/div/div[3]/div/div[4]/div/form/div[5]/button[1]")
+    @FindBy(xpath = "//button[contains(text(), 'Create Group')]")
     WebElement createGroup_xpath;
 
 
@@ -43,10 +43,10 @@ public class CreateNewGroupPage {
         this.driver = driver;
     }
 
-//    public void verifyCreateNewGroupPageIsDisplayed() {
-//        new WebDriverWait(driver, Duration.ofSeconds(15)).until(visibilityOf(createNewGroupHeading_xpath));
-//        createNewGroupHeading_xpath.isDisplayed();
-//    }
+    public void verifyCreateNewGroupPageIsDisplayed() {
+        new WebDriverWait(driver, Duration.ofSeconds(15)).until(visibilityOf(createNewGroupHeading_xpath));
+        createNewGroupHeading_xpath.isDisplayed();
+    }
 
 
     public void enterGroupName(String groupName) {

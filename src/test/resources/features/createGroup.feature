@@ -30,9 +30,9 @@ Feature: Create Group
     And I click on Sign Up here link
     And Create Your Account page should be displayed
     And I click on Select Your group dropdown
-    And I should see that the group was created successfully <createdGroupName> in the dropdown list
-#    Then I should close the browser
+    And I should see that the group was created successfully
+    Then I should close the browser
     Examples:
-      | email           | password  | groupName          | groupDescription   | year | maxCapacity | startDate  | endDate    | createdGroupName   |
-      | admin@gmail.com | @12345678 | The Magic group 25 | The Magic Group 25 | 2026 | 1500        | 2026-05-26 | 2028-05-28 | The Magic group 24 |
+      | email           | password  | groupName             | groupDescription      | year | maxCapacity | startDate  | endDate    |
+      | admin@gmail.com | @12345678 | Just Another Group 30 | Just Another Group 30 | 2026 | 1500        | 2026-05-26 | 2028-05-28 |
 

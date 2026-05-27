@@ -12,7 +12,7 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
 public class HomePage {
     WebDriver driver;
 
-    @FindBy(xpath ="//*[@id=\"app-root\"]/nav/div[1]/div[3]/button/span[2]")
+    @FindBy(xpath ="//nav//button[.//span[contains(text(), 'Login')]]")
     WebElement loginButton_xpath;
 
     public HomePage(WebDriver driver) {

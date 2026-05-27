@@ -13,7 +13,6 @@ public class Base {
     HomePage homePage = PageFactory.initElements(driver, HomePage.class);
     LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
     DashboardPage dashboardPage = PageFactory.initElements(driver, DashboardPage.class);
-    ManageGroupsPage manageGroupsPage = PageFactory.initElements(driver, ManageGroupsPage.class);
     CreateNewGroupPage createNewGroupPage = PageFactory.initElements(driver, CreateNewGroupPage.class);
     CreateYourAccountPage createYourAccountPage = PageFactory.initElements(driver, CreateYourAccountPage.class);
 
