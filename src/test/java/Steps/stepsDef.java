@@ -183,7 +183,7 @@ public class stepsDef extends Base {
 
    @And("I should see that the group was created successfully")
     public void iShouldSeeThatTheGroupWasCreatedSuccessfully() {
-        createYourAccountPage.verifyGroupValueExists("Just Another Group 30");
+        createYourAccountPage.verifyGroupValueExists("Just Another Group 31");
 
     }
 
